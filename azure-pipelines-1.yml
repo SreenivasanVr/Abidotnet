@@ -10,10 +10,12 @@ pool:
   vmImage: ubuntu-latest
 
 variables:
-  buildConfiguration: 'Release'
-  major: 1
-  minor: 0
-  patch: $[counter(variables['Build.BuildId'], 1)] # Dynamic patch version using a counter
+ - group: dotnet-build
+ - name: buildConfiguration
+   value: 'Release'
+ - name: patch
+   value: $[counter(variables['Build.BuildId'], 1)]
+
 
 name: $(major).$(minor).$(patch)
 
