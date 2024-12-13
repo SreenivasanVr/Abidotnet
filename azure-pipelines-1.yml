@@ -14,7 +14,7 @@ variables:
  - name: buildConfiguration
    value: 'Release'
  - name: patch
-   value: $[counter(variables['Build.BuildId'], 1)]
+   value: $[counter(format('{0}.{1}', variables['major'], variables['minor']), 1)]
 
 
 name: $(major).$(minor).$(patch)
