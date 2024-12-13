@@ -11,6 +11,11 @@ pool:
 
 variables:
   buildConfiguration: 'Release'
+  major: 1
+  minor: 0
+  patch: $[counter(variables['Build.BuildId'], 1)] # Dynamic patch version using a counter
+
+name: $(major).$(minor).$(patch)
 
 steps:
 
