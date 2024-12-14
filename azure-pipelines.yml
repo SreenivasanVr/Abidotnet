@@ -13,10 +13,11 @@ variables:
   - group: dotnet-VG-abi
   - name: buildConfiguration
     value: 'Release'
-
+  - name: buildNumber 
+    value: $[counter(variables['major'], 1)]
   #buildConfiguration: 'Release'
 
-name: $(major).$(minor)-$(VERSION)
+name: $(major).$(minor)-$(buildNumber)
 
 steps:
 
