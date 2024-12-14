@@ -10,9 +10,13 @@ pool:
   #vmImage: 'windows-latest'
   name: Windows
 variables:
-  solution: '**/*.sln'
-  buildPlatform: 'Any CPU'
-  buildConfiguration: 'Release'
+  - group: dotnet-VG-abi
+  - name: buildConfiguration
+    value: 'Release'
+
+  #buildConfiguration: 'Release'
+
+name: $(major).$(minor)
 
 steps:
 
