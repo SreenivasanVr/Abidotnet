@@ -16,7 +16,7 @@ variables:
 
   #buildConfiguration: 'Release'
 
-name: $(major).$(minor)
+name: $(major).$(minor)-$(VERSION)
 
 steps:
 
