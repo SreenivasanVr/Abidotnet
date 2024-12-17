@@ -7,8 +7,8 @@ trigger:
 - main
 
 pool:
-  #vmImage: ubuntu-latest
-  name: Seenu-Self-Hosted-Agent-Pool
+  vmImage: ubuntu-latest
+  #name: Seenu-Self-Hosted-Agent-Pool
 variables:
  - group: dotnet-build
  - name: buildConfiguration
